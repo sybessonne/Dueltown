@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actualise"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:title="@string/actualiser"
+        app:itemIconTint="@color/icone_toolbar"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/parametres"
+        android:icon="@drawable/settings"
+        android:title="@string/parametres"
+        app:itemIconTint="@color/icone_toolbar"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar"
+            app:title="@string/ParametresDuCompte" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mdpActuelTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/MDPactuel"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:errorTextAppearance="@style/errorTextInputLayout">
+
+                <EditText
+                    android:id="@+id/mdpancien"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:textAlignment="center" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mdpTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/nouveauMdp"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:errorTextAppearance="@style/errorTextInputLayout">
+
+                <EditText
+                    android:id="@+id/mdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:textAlignment="center" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mdpConfTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/confirmer_le_mot_de_passe"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:errorTextAppearance="@style/errorTextInputLayout">
+
+                <EditText
+                    android:id="@+id/mdpconf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:textAlignment="center" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/validermdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="15dp"
+
+                android:layout_marginStart="15dp"
+                android:background="@drawable/ripple_button"
+
+                android:shadowColor="@color/black"
+                android:text="@string/validerNouveauMDP"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emailTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/email"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorTextInputLayout">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/valideremail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+
+                android:background="@drawable/ripple_button"
+                android:shadowColor="@color/black"
+
+                android:text="@string/changerEmail"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/changerVille"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+
+                android:background="@drawable/ripple_button"
+                android:shadowColor="@color/black"
+                android:text="@string/changerVille"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

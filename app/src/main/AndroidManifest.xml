@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dueltown">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" android:maxSdkVersion="18"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--Pour le broadcast receiver pour le lancer au démarrage du téléphone-->
+        <receiver android:name=".BootComplete"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!--Pour le broadcast receiver pour verifier si la connexion internet est activée-->
+        <receiver android:name=".InternetComplete"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--le service de notifications-->
+        <service android:name=".NotificationService" >
+        </service>
+
+        <!--l'activité principale-->
+        <activity android:name=".demarrage"
+            android:theme="@style/background_start"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Les autres activités-->
+        <activity android:name=".connexion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".mdpOublie"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".inscription"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".choixVille"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity android:name=".principal"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".lanceDefi"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".activityIntermediaireDefis"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".questionsdefi"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".solutionDefiFini"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".solutionDefiFiniHistorique"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".statistiques.statistiques"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".statistiques.classementVille"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".statistiques.classementSemaine"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".statistiques.classementJoueursVille"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".statistiques.classementJoueursFrance"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".statistiques.statsVilleJoueur"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".historique"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".parametres.parametres"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".parametres.moncompte"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".parametres.changerVille"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".parametres.paramAppli"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".parametres.notification">
+        </activity>
+        <activity android:name=".parametres.contact"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".soumquestion"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SuggestionVille"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".parametres.aPropos"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".parametres.CGU"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".parametres.aide"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+</manifest>

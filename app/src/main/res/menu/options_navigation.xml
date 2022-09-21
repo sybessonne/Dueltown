@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/stats"
+            android:icon="@drawable/stats"
+            android:title="@string/stats" />
+        <item
+            android:id="@+id/historique"
+            android:icon="@drawable/historic"
+            android:title="@string/historique" />
+        <item
+            android:id="@+id/question"
+            android:icon="@drawable/question"
+            android:title="@string/soumettreQuestion" />
+        <item
+            android:id="@+id/newVille"
+            android:icon="@drawable/newville"
+            android:title="@string/suggererVille" />
+        <item
+            android:id="@+id/partager"
+            android:icon="@drawable/share"
+            android:title="@string/partager" />
+    </group>
+</menu>
